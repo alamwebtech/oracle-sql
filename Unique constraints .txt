@@ -1,0 +1,32 @@
+
+create table state ( state_code varchar2(2) primary key, state_desc varchar2(50) not null ) 
+Table STATE created.
+create table emp ( empno number primary key, name varchar2(50) , state_code REFERENCES state (state_code ) );
+Table EMP created.
+
+insert into state values ( 'NJ', 'New Jersey') ;
+1 row inserted.
+insert into state values ( 'NY', 'New York') ;
+1 row inserted.
+
+COMMIT;
+
+
+-- Try to insert 1 emp row with incorrect DE data 
+insert into emp values ( 1 , 'sam' , 'DE') ; 
+
+Error starting at line : 16 in command -
+insert into emp values ( 1 , 'sam' , 'DE') 
+Error report -
+SQL Error: ORA-02291: integrity constraint (STUDENT5.SYS_C0013314) violated - parent key not found
+02291. 00000 - "integrity constraint (%s.%s) violated - parent key not found"
+*Cause:    A foreign key value has no matching primary key value.
+*Action:   Delete the foreign key or add a matching primary key.
+
+
+-- fix the state to NY
+insert into emp values ( 1 , 'sam' , 'NY') ; 
+
+1 row inserted.
+
+

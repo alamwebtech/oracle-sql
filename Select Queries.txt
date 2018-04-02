@@ -1,0 +1,54 @@
+SELECT COL1, COL2, COL3 .... COLN  FROM TABLENAME WHERE CONDITION
+
+
+SELECT 
+     COLUMNNAMES ... 
+FROM 
+     TABLE_NAMES
+WHERE 
+     CONDITION
+ORDER BY 
+     COLUMNNAME ASC|DESC
+
+Q) Display all employees 
+
+SELECT * FROM HR.EMPLOYEES 
+
+Q) Display EmpId, full name and salary of all employees
+
+SELECT EMPLOYEE_ID , FIRST_NAME, LAST_NAME , SALARY FROM HR.EMPLOYEES
+
+Q) Display employees who are making salary equal to 4200
+
+SELECT * FROM HR.EMPLOYEES  where salary = 4200 
+
+q) display employees who are working under Nancy ( nancy as manager ) 
+
+step 1) find employee_id of Nancy 
+SELECT * FROM HR.EMPLOYEES where first_name ='Nancy' 
+empid = 108
+
+step 2) find all employees where nancy(emp_id) is manager 
+   SELECT * FROM HR.EMPLOYEES where  manager_id= 108 
+
+NOT EQUAL TO ==> <> or !
+
+Q) Display emps who are making salary of 3000 or more 
+
+SELECT * FROM HR.EMPLOYEES where salary >= 3000 
+
+
+Q) Display emps who are making salary of more than 3000 
+
+SELECT * FROM HR.EMPLOYEES where salary > 3000 
+
+Q) Display employees who are making more than 8000 or working in dept 60 
+
+
+SELECT * FROM HR.EMPLOYEES where   salary > 8000 
+
+
+SELECT * FROM HR.EMPLOYEES where department_id = 60 or salary > 8000 
+
+
+      
