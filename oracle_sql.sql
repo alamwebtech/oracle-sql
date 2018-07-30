@@ -35,4 +35,46 @@ insert into job_history_1 values( 122, (TO_DATE('01-JAN-07','dd/mm/yyyy')),(TO_D
 
 select * from job_history_1;
 
+select * from employees_1;
 
+CREATE TABLE PEOPLE (FIRST_NAME varchar2 (50), LAST_NAME varchar2 (50), EMPLOYEE_ID number(5), EMAIL varchar2(50), HIRE_DATE DATE, SALRY number(8,4));
+
+select * from people;
+
+INSERT INTO PEOPLE VALUES ('PHANY', 'MUNDRO', 101, 'PHANYMUNDRO',(TO_DATE('10-JAN-06','dd/mm/yyyy')), 5000);
+
+select * from people;
+
+INSERT INTO PEOPLE VALUES ('MD', 'ALAM', 102, 'MDALAM', (TO_DATE('01-FEB-07', 'dd/mm/yyyy')), 7000);
+select * from people;
+
+INSERT INTO PEOPLE VALUES ('HASAN', 'ALI', 103, 'HASANALI', (TO_DATE('02-MAR-08', 'dd/mm/yyyy')), 7000);
+
+DELETE FROM PEOPLE WHERE EMPLOYEE_ID = 103;
+select * from people;
+
+select * from employees;
+select * from department;
+select * from employees;
+
+select * from employees where job_id = 'IT_PROG';
+SELECT FIRST_NAME,LAST_NAME, SALARY FROM EMPLOYEES;
+
+SELECT EMPLOYEE_ID, LAST_NAME, DEPARTMENT_ID FROM EMPLOYEES;
+
+ALTER TABLE EMPLOYEES RENAME COLUMN EMPLOYEE_ID to ID; 
+
+UPDATE EMPLOYEES SET EMPLOYEE_ID = ID;
+SELECT * FROM PEOPLE;
+
+ALTER TABLE PEOPLE RENAME COLUMN EMPLOYEE_ID to ID;
+select * from people;
+ALTER TABLE PEOPLE RENAME COLUMN LAST_NAME to NAME;
+SELECT * FROM EMPLOYEES;
+
+SELECT * from Employees where FIRST_NAME = 'Mark';
+commit;
+
+/*NOTE*/
+
+A relation is a set of tuple ( relation = TABLE and tuple= rows)
