@@ -78,3 +78,23 @@ commit;
 /*NOTE*/
 
 A relation is a set of tuple ( relation = TABLE and tuple= rows)
+
+/* To Describe the table what kind of data contains use bellow command*/
+
+DESC employees;
+
+/* Using where and >, <, =, != operatior*/
+select * from employees where salary > 4000;
+select * from employees where job_id = 'IT_PROG';
+
+/*Using IN to get the specif data */
+select employee_ID, first_name, last_name from employees where employee_id in (100, 105, 110);
+
+/* Using ORDER BY, ASC, DESC Claus*/
+
+select employee_ID, first_name, last_name from employees order by last_name;
+select employee_ID, first_name, last_name from employees order by first_name desc, last_name asc;
+
+/*Using Charecter FUNCTION like LOWER, UPPER Initcap (initcap=firt letter capital) */
+
+select first_name, upper(first_name),lower(last_name), initcap(email) from employees;
