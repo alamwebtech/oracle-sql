@@ -98,3 +98,8 @@ select employee_ID, first_name, last_name from employees order by first_name des
 /*Using Charecter FUNCTION like LOWER, UPPER Initcap (initcap=firt letter capital) */
 
 select first_name, upper(first_name),lower(last_name), initcap(email) from employees;
+
+/* Adding or substracting months using add_months*/
+
+select sysdate, add_months(sysdate, 2) from dual;
+select sysdate, add_months(sysdate, -2) from dual;
