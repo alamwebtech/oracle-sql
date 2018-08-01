@@ -109,4 +109,6 @@ select sysdate, add_months(sysdate, -2) from dual;
 /* OUTER JOIN = Return the result including matched and unmatched columns */
 
 /* LEFT JOIN = Return all the columns from the left table and NULL form the right table that unmatched*/
-select first_name, last_name, department_id from employees join departments using (department_id);
+select first_name, last_name, department_id from employees left outer join departments using (department_id);
+
+/* RIGHT JOIN = Return all the matched rows and unmatched rows from the right jon*/
