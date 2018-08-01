@@ -103,3 +103,10 @@ select first_name, upper(first_name),lower(last_name), initcap(email) from emplo
 
 select sysdate, add_months(sysdate, 2) from dual;
 select sysdate, add_months(sysdate, -2) from dual;
+
+/* NATURAL JOIN also known as INNER join that only display matched columns*/
+
+/* OUTER JOIN = Return the result including matched and unmatched columns */
+
+/* LEFT JOIN = Return all the columns from the left table and NULL form the right table that unmatched*/
+select first_name, last_name, department_id from employees join departments using (department_id);
