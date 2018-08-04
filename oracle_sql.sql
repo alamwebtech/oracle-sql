@@ -112,3 +112,14 @@ select sysdate, add_months(sysdate, -2) from dual;
 select first_name, last_name, department_id from employees left outer join departments using (department_id);
 
 /* RIGHT JOIN = Return all the matched rows and unmatched rows from the right jon*/
+
+CREATE TABLE DEPARTMENT (DEPARTMENT_ID number, DEPRTMENT_NAME varchar2(50), MANAGER_ID number, LOCATION_ID number ); 
+
+select * from department;
+
+INSERT INTO DEPARTMENT VALUES
+(240, 'Retail Sales', null, 1700);
+
+select * from Department;
+
+update Department set DEPARTMENT_ID = 190 where DEPRTMENT_NAME = 'Contracting';
