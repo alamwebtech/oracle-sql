@@ -123,3 +123,7 @@ INSERT INTO DEPARTMENT VALUES
 select * from Department;
 
 update Department set DEPARTMENT_ID = 190 where DEPRTMENT_NAME = 'Contracting';
+
+/* FULL OUTER JOIN = data that does not share rows or have in the both tables, howver it is nt possible
+MySql, the way to do is using LEFT join first, 2ndly RIGHT join and then combine the both 
+table */
