@@ -1,15 +1,4 @@
-CREATE TABLE DEPARTMENT (DEPARTMENT_ID number, DEPRTMENT_NAME varchar2(50), MANAGER_ID number, LOCATION_ID number ); 
 
-select * from department;
-
-INSERT INTO DEPARTMENT VALUES
-(240, 'Retail Sales', null, 1700);
-
-select * from Department;
-
-update Department set DEPARTMENT_ID = 190 where DEPRTMENT_NAME = 'Contracting';
-
-select * from Department;
 
 select * from employees;
 
@@ -127,3 +116,16 @@ update Department set DEPARTMENT_ID = 190 where DEPRTMENT_NAME = 'Contracting';
 /* FULL OUTER JOIN = data that does not share rows or have in the both tables, howver it is nt possible
 MySql, the way to do is using LEFT join first, 2ndly RIGHT join and then combine the both 
 table */
+
+CREATE TABLE DEPARTMENT (DEPARTMENT_ID number, DEPRTMENT_NAME varchar2(50), MANAGER_ID number, LOCATION_ID number ); 
+
+select * from department;
+
+INSERT INTO DEPARTMENT VALUES
+(240, 'Retail Sales', null, 1700);
+
+select * from Department;
+
+update Department set DEPARTMENT_ID = 190 where DEPRTMENT_NAME = 'Contracting';
+
+select * from Department;
