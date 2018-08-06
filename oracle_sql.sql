@@ -140,4 +140,6 @@ CREATE TABLE employees_copy AS SELECT * FROM employees;
 
 CREATE TABLE employees_copy AS SELECT * FROM employees WHERE 1 = 2;
 
+CREATE TABLE employees_copy2 AS SELECT * FROM employees WHERE job_id = 'IT-PROG';
+
 
