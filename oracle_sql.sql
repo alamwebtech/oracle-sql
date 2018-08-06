@@ -117,7 +117,7 @@ update Department set DEPARTMENT_ID = 190 where DEPRTMENT_NAME = 'Contracting';
 MySql, the way to do is using LEFT join first, 2ndly RIGHT join and then combine the both 
 table */
 
-CREATE TABLE DEPARTMENT (DEPARTMENT_ID number, DEPRTMENT_NAME varchar2(50), MANAGER_ID number, LOCATION_ID number ); 
+CREATE TABLE DEPARTMENT (DEPARTMENT_ID number (3), DEPRTMENT_NAME varchar2(50), MANAGER_ID number, LOCATION_ID number ); 
 
 select * from department;
 
@@ -129,3 +129,15 @@ select * from Department;
 update Department set DEPARTMENT_ID = 190 where DEPRTMENT_NAME = 'Contracting';
 
 select * from Department;
+
+/* for Copying the table we can use bellow queries */
+
+/*1.to copy the table With data */
+
+CREATE TABLE employees_copy AS SELECT * FROM employees;
+
+/*2.to copy  the table Without data */
+
+CREATE TABLE employees_copy AS SELECT * FROM employees WHERE 1 = 2;
+
+
